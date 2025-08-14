@@ -67,6 +67,8 @@ class AuthenticationGeneratorTest < Rails::Generators::TestCase
       assert_match(/session_test_helper/, content)
       assert_match(/SessionTestHelper/, content)
     end
+
+    assert_file "test/mailers/previews/passwords_mailer_preview.rb"
   end
 
   def test_authentication_generator_without_bcrypt_in_gemfile
@@ -116,6 +118,8 @@ class AuthenticationGeneratorTest < Rails::Generators::TestCase
       assert_match(/session_test_helper/, content)
       assert_match(/SessionTestHelper/, content)
     end
+
+    assert_file "test/mailers/previews/passwords_mailer_preview.rb"
   end
 
   def test_model_test_is_skipped_if_test_framework_is_given
